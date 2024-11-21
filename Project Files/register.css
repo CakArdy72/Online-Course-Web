@@ -1,0 +1,146 @@
+/* Resetting some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body style */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eafaf1; /* Light green background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Main container style */
+.container {
+    max-width: 450px;
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Hover effect for the container */
+}
+
+/* Form Header */
+h2 {
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #2c3e50; /* Darker color for header */
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Navigation links */
+nav a {
+    color: #27ae60; /* Green color */
+    text-decoration: none;
+    font-size: 1rem;
+    margin: 10px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #219653; /* Darker green on hover */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Input field styling */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+select {
+    padding: 14px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9; /* Light gray background for inputs */
+    width: 100%; /* Full width for inputs */
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+select:focus {
+    border-color: #27ae60; /* Green border on focus */
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.5);
+    background-color: #fff; /* White background on focus */
+}
+
+/* Label styling */
+label {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+/* Submit button styling */
+button {
+    padding: 12px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #27ae60; /* Green button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width for button */
+}
+
+button:hover {
+    background-color: #219653; /* Darker green on hover */
+    transform: translateY(-2px); /* Button lift effect */
+}
+
+/* Hidden class for showing/hiding forms */
+.hidden {
+    display: none;
+}
+
+/* Animation for form transition */
+#login, #register {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#login.active, #register.active {
+    opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
